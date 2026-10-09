@@ -1,0 +1,37 @@
+# -------------------------------------------------------------------------- #
+# Quartus Prime Settings File (.qsf)
+# Silicon-Biometric Secure Element | DE10-Nano
+# -------------------------------------------------------------------------- #
+
+# --- Device ---
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7
+set_global_assignment -name TOP_LEVEL_ENTITY puf_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "20.1.0"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+
+# --- RTL Sources ---
+set_global_assignment -name VERILOG_FILE ../rtl/ro_cell.v
+set_global_assignment -name VERILOG_FILE ../rtl/ro_array.v
+set_global_assignment -name VERILOG_FILE ../rtl/measure_unit.v
+set_global_assignment -name VERILOG_FILE ../rtl/error_correction.v
+set_global_assignment -name VERILOG_FILE ../rtl/aes_auth.v
+set_global_assignment -name VERILOG_FILE ../rtl/control_fsm.v
+set_global_assignment -name VERILOG_FILE ../rtl/puf_regs.v
+set_global_assignment -name VERILOG_FILE ../rtl/puf_top.v
+
+# --- Timing Constraints ---
+set_global_assignment -name SDC_FILE ../constraints/puf_timing.sdc
+
+# --- Pin Assignments ---
+source ../constraints/puf_pins.qsf
+
+# --- Compiler ---
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name LL_ENABLED ON

@@ -1,0 +1,14 @@
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime Project File (.qpf)
+#
+# Project:     Silicon-Biometric Secure Element
+# Team:        Ruang Circuit - PENS
+# Competition: PERURI Chip Hackathon 2026
+#
+# -------------------------------------------------------------------------- #
+
+QUARTUS_VERSION = "20.1"
+DATE = "2026-10-08"
+
+PROJECT_REVISION = "silicon_biometric_puf"

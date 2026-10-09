@@ -1,0 +1,81 @@
+# Quartus project files
+*.qws
+db/
+incremental_db/
+output_files/
+simulation/
+*.rpt
+*.done
+*.summary
+*.smsg
+*.pin
+*.jdi
+*.sld
+*.bak
+
+# Programming files (generated, large)
+*.sof
+*.pof
+*.rbf
+*.svf
+*.jic
+
+# ModelSim / Questa
+work/
+*.wlf
+*.vstf
+transcript
+vsim.wlf
+
+# Simulation outputs
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+
+# Icarus Verilog
+*.vvp
+
+# Verilator
+obj_dir/
+
+# SignalTap
+*.stp
+
+# Platform Designer
+*.sopcinfo
+*_generation_script
+
+# Compiled binaries
+*.o
+*.elf
+puf_enroll
+puf_verify
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+
+# Data files (generated during analysis)
+*.csv
+!scripts/sample_*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Temporary
+tmp/
+temp/
